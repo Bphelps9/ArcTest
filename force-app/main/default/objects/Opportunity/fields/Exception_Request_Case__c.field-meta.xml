@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Exception_Request_Case__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Lookup field to link directly to Exception Request Case for this Opportunity</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Use this field to link to the Exception Request Case for this Opportuntiy.</inlineHelpText>
+    <label>Exception Request Case</label>
+    <lookupFilter>
+        <active>true</active>
+        <errorMessage>This field only allows Exception Request Cases to be entered</errorMessage>
+        <filterItems>
+            <field>Case.Type</field>
+            <operation>equals</operation>
+            <value>Digital Exception, Materials Exception</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Case</referenceTo>
+    <relationshipLabel>Opportunities</relationshipLabel>
+    <relationshipName>Opportunities</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>
